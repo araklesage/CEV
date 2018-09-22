@@ -1,0 +1,4 @@
+services:
+#    cev_news.example:
+#        class: CEV\NewsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

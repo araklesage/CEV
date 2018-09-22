@@ -1,3 +1,11 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+cev_news:
+    resource: "@CEVNewsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+cev_core:
+    resource: "@CEVCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

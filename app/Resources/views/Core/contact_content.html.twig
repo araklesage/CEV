@@ -1,0 +1,33 @@
+<main role="main" class="container" id="pageContact" >
+
+
+    {{ form_start(form) }}
+    <div class="form-group row col-lg-12 col-sm-12">
+        {# First name #}
+        <div class="col-lg-6 col-sm-6">
+            {{ form_label (form.firstName, "Prénom", {'label_attr': {'class' : 'control-label'}} ) }}
+            {{ form_errors(form.firstName) }}
+            {{ form_widget(form.firstName, {'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            {{ form_label (form.lastName, "Nom", {'label_attr': {'class' : 'control-label'}} ) }}
+            {{ form_errors(form.lastName) }}
+            {{ form_widget(form.lastName, {'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="col-lg-12 col-sm-12">
+            {{ form_label (form.mail, "Adresse Mail", {'label_attr': {'class' : 'control-label'}} ) }}
+            {{ form_errors(form.mail) }}
+            {{ form_widget(form.mail, {'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="col-lg-12 col-sm-12">
+            {{ form_label (form.subject, "Sujet", {'label_attr': {'class' : 'control-label'}} ) }}
+            {{ form_errors(form.subject) }}
+            {{ form_widget(form.subject, {'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="col-lg-12 col-sm-12">
+            {{ form_label (form.body, "Message", {'label_attr': {'class' : 'control-label'}} ) }}
+            {{ form_errors(form.body) }}
+            {{ form_widget(form.body, {'attr': {'class': 'form-control'} }) }}
+        </div>
+    </div>
+</main>
