@@ -5,8 +5,7 @@ namespace CEV\CoreBundle\Controller;
 use CEV\CoreBundle\Entity\Contact;
 use CEV\CoreBundle\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 
@@ -19,7 +18,13 @@ class CoreController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('Core/homepage.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository('CEVNewsBundle:Article')->findAll();
+
+        return $this->render('Core/homepage.html.twig', array(
+            'articles' => $articles
+        ));
     }
 
 

@@ -1,0 +1,36 @@
+#header{
+    height: 100vh;
+    width: 100%;
+}
+.full-height {
+    width: 100vh;
+}
+#logo {
+    margin-top: 5px;
+}
+#service-page-home {
+ padding: 15px;
+    z-index: 2;
+}
+
+#window {
+    padding-right: 0;
+    padding-left: 0;
+
+}
+.img-center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.image-container{
+    position:relative;
+    text-align: center;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

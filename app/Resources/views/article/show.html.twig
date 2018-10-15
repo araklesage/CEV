@@ -1,0 +1,54 @@
+{% extends 'layout.html.twig' %}
+
+{% block headtitle %}info – {{ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="section-padding" id="article-page">
+        <div class="container" id="pageArticle">
+            {% if article.image is not null %}
+                <img
+                        src="{{ asset(article.image.webPath) }}"
+                        alt="{{ article.image.alt }}"
+                        height="60"
+                />
+            {% else %}
+                <img src="{{ asset ('bundles/cevcore/images/lamp.jpg') }}" height="60">
+            {% endif %}
+            <div class="blog-content">
+                <h1>{{ article.title }}</h1>
+                <div class="blog-meta">
+                    <i class="glyphicon glyphicon-time"></i>
+                    <span>{{ article.date|date('d/m/Y') }}</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        {{ article.content|raw }}
+                    </div>
+                </div>
+
+                <div class="buttonBlog">
+                    <a href="{{ path('news') }}" class="btn btn-light">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        <p>Retour à la liste</p>
+                    </a>
+                </div>
+                {% if (is_granted("IS_AUTHENTICATED_REMEMBERED")) and (is_granted("ROLE_ADMIN")) %}
+                    <div class="buttonCommentAdmin">
+                        <div class="buttonBlog">
+                            <a href="{{ path('article_edit', {'id': article.id}) }}" class="btn btn-secondary">
+                                <i class="glyphicon glyphicon-edit"></i>
+                                <p>Modifier l'article</p>
+                            </a>
+                        </div>
+                        <div class="buttonBlog">
+                            <a href="{{ path('article_delete', {'id': article.id}) }}" class="btn btn-danger">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <p>Supprimer l'article</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

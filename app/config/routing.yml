@@ -1,11 +1,30 @@
+cev_calendar:
+    resource: "@CEVCalendarBundle/Controller/"
+    type:     annotation
+    prefix:   /calendar
+
+cev_user:
+    resource: "@CEVUserBundle/Controller/"
+    type:     annotation
+    prefix:   /user
+
 cev_news:
     resource: "@CEVNewsBundle/Controller/"
     type:     annotation
-    prefix:   /
-
+    prefix:   /news
 
 cev_core:
     resource: "@CEVCoreBundle/Controller/"
     type:     annotation
     prefix:   /
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+toiba_fullcalendar:
+    resource: "@FullCalendarBundle/Resources/config/routing.yaml"
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin

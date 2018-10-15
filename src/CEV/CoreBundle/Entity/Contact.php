@@ -223,5 +223,10 @@ class Contact
     {
         return $this->date;
     }
+
+    public function getName()
+    {
+        return $this->getFirstName().' '.$this->getLastName();
+    }
 }
 

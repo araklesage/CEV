@@ -38,16 +38,19 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="string", length=255)
+     * @ORM\Column(name="content", type="text")
      */
     private $content;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255)
+     * @ORM\OneToOne(targetEntity="CEV\NewsBundle\Entity\Image", cascade={"persist", "remove"})
      */
     private $image;
+
+    public function __construct()
+    {
+        $this->date         = new \DateTime();
+    }
 
 
     /**
