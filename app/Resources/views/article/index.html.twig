@@ -1,45 +1,45 @@
-{% extends 'base.html.twig' %}
+{% extends 'article/layout.html.twig'  %}
 
-{% block body %}
-    <h1>Articles list</h1>
+{% block article %}
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Content</th>
-                <th>Image</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>
-                <td>{{ article.title }}</td>
-                <td>{% if article.date %}{{ article.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ article.content }}</td>
-                <td>{{ article.image }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('article_show', { 'id': article.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('article_new') }}">Create a new article</a>
-        </li>
-    </ul>
+    <!--Header-area-->
+
+    <section class="section-padding " id="blog-page">
+        <div class="container-fluid" id="pageBlog">
+            <div class="row">
+                {% for article in articles %}
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="{{ path('article_show', {'id': article.id}) }}" class="card">
+                            <div class="card-image">
+                                {% if article.image is not null %}
+                                    {{ article.image }}
+
+                                {% else %}
+                                    <img src="{{ asset ('bundles/cevcore/images/lamp.jpg') }}">
+                                {% endif %}
+                            </div>
+                            <div class="card-title">
+                                <h4>
+                                    {{ article.title }}
+                                </h4>
+                            </div>
+                            <ul class="card-action">
+
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                <span>{{ article.date|date('d/m/Y') }}</span>
+                            </ul>
+                            <div class="card-content">
+                                <p>{{ article.content|truncate(200, true)|raw }}</p>
+
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+
 {% endblock %}

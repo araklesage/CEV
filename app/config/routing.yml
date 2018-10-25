@@ -1,3 +1,7 @@
+cev_news_post:
+    resource: "@CEVNewsBundle/Controller/PostController.php"
+    type:     annotation
+
 cev_calendar:
     resource: "@CEVCalendarBundle/Controller/"
     type:     annotation

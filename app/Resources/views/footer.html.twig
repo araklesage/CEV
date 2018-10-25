@@ -1,64 +1,52 @@
 {% block footer %}
-    <footer class="footer parallax-container navbar-fixed-bottom" id="footer" style="height: 250px" >
-        <div class="parallax">
-            <img src="{{ asset("bundles/cevcore/images/network.jpg")}}" style="opacity: 1">
+    <footer class="footer parallax-container navbar-fixed-bottom" id="footer" style="height: 250px">
+        <div class="parallax" style="padding: 10px">
+            <img src="{{ asset("bundles/cevcore/images/old.jpg") }}" style="opacity: 1">
             <div class="row">
-                <div class="col-md-2 col-sm-4">
-                    <div class="img-fluid">
-                        <a href="{{ path('home') }}">
-                            <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" alt="Cev" height="75"
-                            style="opacity: 1">
-                        </a>
-                    </div>
-
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <p class="mb-4 mbr-fonts-style foot-title display-7">
-                        RECENT NEWS
-                    </p>
-                    <p class="mbr-text mbr-links-column mbr-fonts-style display-7">
-                        <a href="#" class="text-black">About us</a>
-                        <br><a href="#" class="text-black">Services</a>
-                        <br><a href="#" class="text-black">Selected Work</a>
-                        <br><a href="#" class="text-black">Get In Touch</a>
-                        <br><a href="#" class="text-black">Careers</a>
-                    </p>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <p class="mb-4 mbr-fonts-style foot-title display-7">
-                        CATEGORIES
-                    </p>
-                    <p class="mbr-text mbr-fonts-style mbr-links-column display-7">
-                        <a href="#" class="text-black">Business</a>
-                        <br><a href="#" class="text-black">Design</a>
-                        <br><a href="#" class="text-black">Real life</a>
-                        <br><a href="#" class="text-black">Science</a>
-                        <br><a href="#" class="text-black">Tech</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <p class="mb-4 mbr-fonts-style foot-title display-7">
-                        SUBSCRIBE
-                    </p>
-                    <p class="mbr-text form-text mbr-fonts-style display-7">
-                        Get monthly updates and free resources.
-                    </p>
-                    <div class="media-container-column" data-form-type="formoid">
-                        <div data-form-alert="" hidden="" class="align-center">
-                            Thanks for filling out the form!
+                <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
+                    <h6 class="mb-4 mbr-fonts-style foot-title display-7 text-center">
+                        PARTENAIRES
+                    </h6>
+                    <div class="row">
+                        <div class="col-md-6" style="height: 90px">
+                            <a href="http://www.frcneurodon.org/" style="width: inherit">
+                                <img src="{{ asset("bundles/cevcore/logos/frc.png") }}" alt="frc-logo"
+                                     style=" opacity: 1; width: inherit; box-shadow: 2px 1px 5px 0px black">
+                            </a>
                         </div>
-
-                        <form class="form-inline" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form">
-                            <input type="hidden" value="ya3ewTwS4ENJoLMbhbDePqYqcrdpMHTtN8hIkIZ39s0Yy6DtbUzgVHIU1w8byxP/XOK1qnivIX8aMPEEpQeBh+D5IArvILZfRhE+kCwsdDzT03uVfdaaD3kEMEjyCMB7" data-form-email="true">
-                            <div class="form-group">
-                                <input type="email" class="form-control input-sm input-inverse my-2" name="email" required="" data-form-field="Email" placeholder="Email" id="email-footer3-d">
-                            </div>
-                            <div class="input-group-btn m-2">
-                                <button href="" class="btn btn-primary display-4" type="submit" role="button">Subscribe</button>
-                            </div>
-                        </form>
+                        <div class="col-md-6" style="height: 90px">
+                            <a href="https://www.helloasso.com/" style="width: inherit">
+                                <img src="{{ asset("bundles/cevcore/logos/hello-asso.png") }}" alt="frc-logo"
+                                     style=" opacity: 1; width: inherit">
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
+                    <h6 class="mb-4 mbr-fonts-style foot-title display-7">
+                        Informations légales
+                    </h6>
+                    <ul class="quick_link">
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Mention Légales</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Condition général d'utilisation</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Plan du site</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
 
+                    <address>
+                        <ul class="my_address">
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>cev@free.fr</a></li>
+                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>01 40 33 77 91</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>36 Avenue Alsace Lorraine, 19000 TULLE </span></a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
+                    <a href="{{ path ('home') }}" style="width: inherit">
+                    <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" alt="Logo CEV"  style=" opacity: 1; width: inherit">
+                    </a>
                 </div>
             </div>
             <div class="footer-lower">
@@ -70,7 +58,7 @@
                 <div class="media-container-row">
                     <div class="col-sm-6 copyright">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            © Copyright 2017 Mobirise - All Rights Reserved
+                            © Copyright 2018 Part'Z - All Rights Reserved. Designed by Arak
                         </p>
                     </div>
                     <div class="col-md-6">

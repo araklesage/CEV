@@ -22,7 +22,7 @@ class NewsController extends Controller
 
         $articles = $em->getRepository('CEVNewsBundle:Article')->findAll();
 
-        return $this->render('news/index.html.twig', array(
+        return $this->render('article/index.html.twig', array(
             'articles' => $articles,
         ));
     }
@@ -47,7 +47,7 @@ class NewsController extends Controller
             return $this->redirectToRoute('article_show', array('id' => $article->getId()));
         }
 
-        return $this->render('news/new.html.twig', array(
+        return $this->render('article/new.html.twig', array(
             'article' => $article,
             'form' => $form->createView(),
         ));
