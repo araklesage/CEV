@@ -2,70 +2,72 @@
     <footer class="footer parallax-container navbar-fixed-bottom" id="footer" style="height: 250px">
         <div class="parallax" style="padding: 10px">
             <img src="{{ asset("bundles/cevcore/images/old.jpg") }}" style="opacity: 1">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
-                    <h6 class="mb-4 mbr-fonts-style foot-title display-7 text-center">
-                        PARTENAIRES
-                    </h6>
-                    <div class="row">
-                        <div class="col-md-6" style="height: 90px">
-                            <a href="http://www.frcneurodon.org/" style="width: inherit">
-                                <img src="{{ asset("bundles/cevcore/logos/frc.png") }}" alt="frc-logo"
-                                     style=" opacity: 1; width: inherit; box-shadow: 2px 1px 5px 0px black">
-                            </a>
-                        </div>
-                        <div class="col-md-6" style="height: 90px">
-                            <a href="https://www.helloasso.com/" style="width: inherit">
-                                <img src="{{ asset("bundles/cevcore/logos/hello-asso.png") }}" alt="frc-logo"
-                                     style=" opacity: 1; width: inherit">
-                            </a>
-                        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
+                <h6 class="mb-4 mbr-fonts-style foot-title display-7 text-center">
+                    PARTENAIRES
+                </h6>
+                <div class="row">
+                    <div class="col-md-6" style="height: 90px">
+                        <a href="http://www.frcneurodon.org/" style="width: inherit">
+                            <img src="{{ asset("bundles/cevcore/logos/frc.png") }}" alt="frc-logo"
+                                 style=" opacity: 1; width: inherit; box-shadow: 2px 1px 5px 0px black">
+                        </a>
+                    </div>
+                    <div class="col-md-6" style="height: 90px">
+                        <a href="https://www.helloasso.com/" style="width: inherit">
+                            <img src="{{ asset("bundles/cevcore/logos/hello-asso.png") }}" alt="frc-logo"
+                                 style=" opacity: 1; width: inherit">
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
-                    <h6 class="mb-4 mbr-fonts-style foot-title display-7">
-                        Informations légales
-                    </h6>
-                    <ul class="quick_link">
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Mention Légales</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Condition général d'utilisation</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Plan du site</a></li>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
+                <h6 class="mb-4 mbr-fonts-style foot-title display-7">
+                    Informations légales
+                </h6>
+                <ul class="quick_link">
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Mention Légales</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i>Condition général d'utilisation</a></li>
+                    <li><a href="{{ path('admin') }}"><i class="fa fa-chevron-right"></i>Administration</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
+
+                <address>
+                    <ul class="my_address">
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>cev@free.fr</a></li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>01 40 33 77 91</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>36 Avenue Alsace Lorraine, 19000 TULLE </span></a>
+                        </li>
                     </ul>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
-
-                    <address>
-                        <ul class="my_address">
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>cev@free.fr</a></li>
-                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>01 40 33 77 91</a></li>
-                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>36 Avenue Alsace Lorraine, 19000 TULLE </span></a>
-                            </li>
-                        </ul>
-                    </address>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
-                    <a href="{{ path ('home') }}" style="width: inherit">
-                    <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" alt="Logo CEV"  style=" opacity: 1; width: inherit">
-                    </a>
+                </address>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
+                <a href="{{ path ('home') }}" style="width: inherit">
+                    <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" alt="Logo CEV"
+                         style=" opacity: 1; width: inherit">
+                </a>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
                 </div>
             </div>
-            <div class="footer-lower">
-                <div class="media-container-row">
-                    <div class="col-sm-12">
-                        <hr>
-                    </div>
+            <div class="media-container-row">
+                <div class="col-sm-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        © Copyright 2018 Part'Z - All Rights Reserved. Designed by Arak
+                    </p>
                 </div>
-                <div class="media-container-row">
-                    <div class="col-sm-6 copyright">
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            © Copyright 2018 Part'Z - All Rights Reserved. Designed by Arak
-                        </p>
-                    </div>
-                    <div class="col-md-6">
+                <div class="col-md-6">
 
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 {% endblock %}

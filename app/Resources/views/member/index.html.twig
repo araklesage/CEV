@@ -1,0 +1,57 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <header class="header-area-blog overlay full-height-miniHeader relative v-center">
+        <div class="absolute anlge-bg"></div>
+        <div class="container">
+            <div class="row v-center">
+                <div class="col-xs-12 col-md-7 header-text-blog">
+                    <h2>Qui sommes nous !</h2>
+                    <h3>Découvrez l'équipe du cerveau en voyage</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for member in members %}
+                <div class="carousel-item">
+                    {% if member.picture is not null %}
+
+                        {{ member.picture }}
+                    {% else %}
+                        <img src="{{ asset('bundles/cevcore/images/cranium.png') }}">
+
+                    {% endif %}
+                    <div class="carousel-caption">
+                        <h3> {{ member.name }} {{ member.lastName|upper }} </h3>
+                        <p> {{ member.role }}</p>
+                    </div>
+
+                    <a href="{{ path('member_show', {'id':member.id}) }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+            {% else %}
+            <h1> Notre équipe est partie en vacances</h1>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
+    </div>
+
+
+    {% if (is_granted("IS_AUTHENTICATED_REMEMBERED")) and (is_granted("ROLE_ADMIN")) %}
+        <ul>
+            <li>
+                <a href="{{ path('member_new') }}">Ajoutez un nouveau membre</a>
+            </li>
+        </ul>
+    {% endif %}
+{% endblock %}

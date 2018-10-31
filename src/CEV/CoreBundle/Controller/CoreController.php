@@ -18,12 +18,10 @@ class CoreController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
 
-        $articles = $em->getRepository('CEVNewsBundle:Article')->findAll();
 
         return $this->render('Core/homepage.html.twig', array(
-            'articles' => $articles
+            'articles' => $articles => $this ->get('app.limit')->getLastArticles;
         ));
     }
 

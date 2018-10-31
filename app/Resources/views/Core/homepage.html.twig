@@ -9,31 +9,36 @@
             </div>
         {% endfor %}
     </div>
+
     <!--Header Area-->
+
     <header class="header-area full-height relative v-center parallax-container" id="header">
 
-        <div class="image-container parallax">
+        <div class="parallax">
             <img src="{{ asset('bundles/cevcore/images/man.jpg') }}" class="img-fluid" alt="responsive-image"
                  style="opacity: 1">
-            <div class="text-center centered">
-                <h2>Aidez la recherche contre les maladies cérébrales</h2>
-                <h3>Venez contribuer en devenant bénévole ou en soutenant la recherche par un
-                    don.</h3>
-                <!-- ajouter le lien -->
-                <a href="{{ path('membership') }}" class="btn btn-light mainButton">Bénévole</a>
-                <a href="{{ path('don') }}" class="btn btn-light mainButton">Donnation</a>
-            </div>
         </div>
+        <div class="text-center centered" id="header-text">
+            <h2>Aidez la recherche contre les maladies cérébrales</h2>
+            <h3>Venez contribuer en devenant bénévole ou en soutenant la recherche par un
+                don.</h3>
+            <!-- ajouter le lien -->
+            <a href="{{ path('membership') }}" class="btn btn-light mainButton">Bénévole</a>
+            <a href="{{ path('don') }}" class="btn btn-light mainButton">Donnation</a>
+        </div>
+
     </header>
     <!--Header Area/-->
 
     <!-- Service area -->
-    <section class="background service" id="service-page-home" style="background-color: #F1B732">
+
+    <section class="background service" id="service-page-home">
+
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="row">
 
-                    <div class="col s4 text-center">
+                    <div class="col s4 text-center service-block">
                         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
                         {% else %}
@@ -55,7 +60,7 @@
                     </div>
 
 
-                    <div class="col-lg-4 text-center">
+                    <div class="col-lg-4 text-center service-block">
                         <a href="{{ path('don') }}" title="Membership" class="card">
                             <div class="card-content">
                                 <div class="card-image">
@@ -67,11 +72,11 @@
                                 <div class="card-title">
                                     <h2>Faites une donnation !</h2>
                                 </div>
-                                <p>Contribuez au financement sur la recherche du cerveau </p>
+                                <p>Contribuez au financement sur la recherche</p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 text-center">
+                    <div class="col-lg-4 text-center service-block">
                         <a href="{{ path('membership') }}" title="Membership" class="card">
                             <div class="card-content">
                                 <div class="card-image">
@@ -114,7 +119,7 @@
                             </div>
                             <div class="card-title">
                                 <h4>
-                                        {{ article.title }}
+                                    {{ article.title }}
                                 </h4>
                             </div>
                             <ul class="card-action">

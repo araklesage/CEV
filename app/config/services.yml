@@ -25,3 +25,5 @@ services:
                 - { name: 'kernel.event_listener', event: 'fullcalendar.set_data', method: loadEvents }
 
 
+
+

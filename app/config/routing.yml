@@ -1,3 +1,7 @@
+cev_user_member:
+    resource: "@CEVUserBundle/Controller/MemberController.php"
+    type:     annotation
+
 cev_news_post:
     resource: "@CEVNewsBundle/Controller/PostController.php"
     type:     annotation

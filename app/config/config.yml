@@ -179,6 +179,15 @@ easy_admin:
                     - { property: 'date', label: "Date"}
                     - { property: 'content', label: "Contenu"}
                     - { property: 'image', label: "Image", type: 'image'}
+        Member:
+                    class : CEV\NewsBundle\Entity\Member
+                    list:
+                        fields:
+                            - { property: 'name', label: "Prénom"}
+                            - { property: 'lastName', label: "Nom de Famille"}
+                            - { property: 'role', label: "Rôle"}
+                            - { property: 'picture', label: "Image", type: 'image'}
+                            - { property: 'presentation', label: "Présention"}
 
 
 

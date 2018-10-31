@@ -1,20 +1,29 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
+
 
 {% block body %}
-    <a href="{{ path('booking_new') }}">Create new booking</a>
 
-    {% include '@FullCalendar/Calendar/calendar.html.twig' %}
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;left:0" id="myCalendar">
+        <button class="btn btn-secondary btn-block" onclick="w3_close_left()">
+            <span class="glyphicon glyphicon-chevron-left">  Fermer</span>
+        </button>
+
+
+        <a href="{{ path('event_new') }}">Create new booking</a>
+
+        {% include '@FullCalendar/Calendar/calendar.html.twig' %}
+
+    </div>
 {% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
-{% endblock %}
 
 {% block javascripts %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="https://momentjs.com/downloads/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/locale-all.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/locale-all.js"></script>
 
     <script type="text/javascript">
         $(function () {
@@ -31,7 +40,7 @@
                     {
                         url: "{{ path('fullcalendar_load_events') }}",
                         type: 'POST',
-                        data:  {
+                        data: {
                             filters: {}
                         },
                         error: function () {
@@ -41,5 +50,21 @@
                 ]
             });
         });
+
+        function w3_open_left() {
+            if(window.matchMedia("(max-width:768px)").matches){
+                document.getElementById("myCalendar").style.width = "100%";
+            }
+            else {
+                document.getElementById("myCalendar").style.width = "25%";
+            }
+            document.getElementById("myCalendar").style.display = "block";
+            document.getElementById("openNavLeft").style.display = 'none';
+        }
+
+        function w3_close_left() {
+            document.getElementById("myCalendar").style.display = "none";
+            document.getElementById("openNavLeft").style.display = "inline-block";
+        }
     </script>
 {% endblock %}

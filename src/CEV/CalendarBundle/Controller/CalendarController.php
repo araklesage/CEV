@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class CalendarController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name= "calendar")
      */
     public function indexAction()
     {
-        return $this->render('CEVCalendarBundle:Default:index.html.twig');
+        return $this->render('Core/calendar.html.twig');
     }
 }

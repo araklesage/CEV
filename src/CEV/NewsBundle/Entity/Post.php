@@ -31,7 +31,7 @@ class Post
     /**
      * @var string
      *
-     * @ORM\Column(name="Content", type="string", length=255)
+     * @ORM\Column(name="Content", type="text")
      */
     private $content;
 

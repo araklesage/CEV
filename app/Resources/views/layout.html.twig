@@ -10,15 +10,18 @@
         <link rel="stylesheet" href="{{ asset('bundles/cevcore/css/normalize.min.css') }}">
         <link rel="stylesheet" href="{{ asset ('bundles/cevcore/css/carousel.css') }}">
         <link rel="stylesheet" href="{{ asset ('bundles/cevcore/css/tether.css') }}">
-        <link rel="stylesheet" href="{{ asset ('bundles/cevcore/css/Style.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{{ asset ('bundles/cevcore/css/Style.css') }}">
     {% endblock %}
 
 </head>
 <body>
 {% block navbar %}
-    {% include 'navbar.html.twig' %}
+    {% include
+        'navbar.html.twig' %}
 {% endblock %}
+
 
 
 <div class="body-container" id="window">

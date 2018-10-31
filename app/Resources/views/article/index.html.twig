@@ -1,17 +1,28 @@
-{% extends 'article/layout.html.twig'  %}
+{% extends 'layout.html.twig' %}
 
-{% block article %}
+{% block body %}
 
+    <header class="header-area-blog overlay full-height-miniHeader relative v-center">
+        <div class="absolute anlge-bg"></div>
+        <div class="container">
+            <div class="row v-center">
+                <div class="col-xs-12 col-md-7 header-text-blog">
+                    <h2>Je m'informe !</h2>
+                    <h3>Consulter nos derniers articles</h3>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!--Header-area-->
-
-    <section class="section-padding " id="blog-page">
+<div class="row">
+    <section class="section-padding col-md-8" id="blog-page">
         <div class="container-fluid" id="pageBlog">
-            <div class="row">
-                {% for article in articles %}
-                    <div class="col-xs-12 col-sm-4">
-                        <a href="{{ path('article_show', {'id': article.id}) }}" class="card">
-                            <div class="card-image">
+            {% for article in articles %}
+                <div class="col-xs-12 col-sm-12">
+                    <a href="{{ path('article_show', {'id': article.id}) }}" class="card">
+                        <div class="row">
+                            <div class="card-image col-md-4">
                                 {% if article.image is not null %}
                                     {{ article.image }}
 
@@ -19,27 +30,31 @@
                                     <img src="{{ asset ('bundles/cevcore/images/lamp.jpg') }}">
                                 {% endif %}
                             </div>
-                            <div class="card-title">
+                            <div class="card-title col-md-8">
                                 <h4>
                                     {{ article.title }}
                                 </h4>
+                                <ul class="card-action">
+
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    <span>{{ article.date|date('d/m/Y') }}</span>
+                                </ul>
+                                <div class="card-content">
+                                    <p>{{ article.content|truncate(200, true)|raw }}</p>
+                                </div>
                             </div>
-                            <ul class="card-action">
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
 
-                                <i class="glyphicon glyphicon-calendar"></i>
-                                <span>{{ article.date|date('d/m/Y') }}</span>
-                            </ul>
-                            <div class="card-content">
-                                <p>{{ article.content|truncate(200, true)|raw }}</p>
-
-                            </div>
-                        </a>
-                    </div>
-                {% endfor %}
-
-            </div>
         </div>
     </section>
+    <section class="col-md-4">
 
+        {{ render(controller("CEVNewsBundle:Post:index")) }}
+
+    </section>
+</div>
 
 {% endblock %}
