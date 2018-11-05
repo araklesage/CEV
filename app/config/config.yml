@@ -180,7 +180,7 @@ easy_admin:
                     - { property: 'content', label: "Contenu"}
                     - { property: 'image', label: "Image", type: 'image'}
         Member:
-                    class : CEV\NewsBundle\Entity\Member
+                    class : CEV\UserBundle\Entity\Member
                     list:
                         fields:
                             - { property: 'name', label: "Prénom"}
@@ -188,6 +188,12 @@ easy_admin:
                             - { property: 'role', label: "Rôle"}
                             - { property: 'picture', label: "Image", type: 'image'}
                             - { property: 'presentation', label: "Présention"}
+
+        Introduction:
+                    class : CEV\UserBundle\Entity\Intro
+                    list:
+                        fields:
+                            - {property: 'content', label:"Contenu"}
 
 
 

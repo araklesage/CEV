@@ -25,9 +25,11 @@ class MemberController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $members = $em->getRepository('CEVUserBundle:Member')->findAll();
+        $intros = $em->getRepository('CEVUserBundle:Intro')->findAll();
 
         return $this->render('member/index.html.twig', array(
             'members' => $members,
+            'intros' => $intros,
         ));
     }
 

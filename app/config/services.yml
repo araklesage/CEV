@@ -24,6 +24,15 @@ services:
             tags:
                 - { name: 'kernel.event_listener', event: 'fullcalendar.set_data', method: loadEvents }
 
+    app.limit :
+            class: CEV\CoreBundle\Service\LimitService
+            public: true
+            arguments : ["@doctrine.orm.entity_manager"]
+
+    # Fixtures services
+    CEV\NewsBundle\DataFixtures\ORM\AppFixtures:
+            tags: [doctrine.fixture.orm]
+
 
 
 

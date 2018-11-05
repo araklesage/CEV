@@ -2,6 +2,27 @@
 #window{
     margin-top: 60px;
 }
+/*Article view*/
+#pageArticle{
+    margin-top: 40px;
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px 4px rgba(0,0,0,0.75);
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.article-title{
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    padding: 15px;
+    width: fit-content;
+}
+
+.buttonBlog{
+    margin-top: 15px;
+}
+
 
 /*Navbar*/
 
@@ -20,6 +41,9 @@ nav{
 }
 .card {
     background-color: #E0A800;
+}
+.service-block{
+    min-height: 361px;
 }
 
 #service-page-home > div > div > div {
@@ -88,9 +112,49 @@ nav{
     position:relative;
     text-align: center;
 }
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
 .centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.centered-top{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.member-box {
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
 }

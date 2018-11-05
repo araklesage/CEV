@@ -108,7 +108,7 @@
             <div class="row">
                 {% for article in articles %}
                     <div class="col-xs-12 col-sm-4">
-                        <a href="{{ path('article_show', {'id': article.id}) }}" class="card">
+                        <a href="{{ path('article_show', {'id': article.id}) }}" class="waves-effect waves-light card">
                             <div class="card-image">
                                 {% if article.image is not null %}
                                     {{ article.image }}

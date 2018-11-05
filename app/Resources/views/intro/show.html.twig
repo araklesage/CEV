@@ -1,0 +1,18 @@
+{% if intro.content is not null %}
+    <h3 class="article-title centered">{{ intro.content }}</h3>
+{% else %}
+    <h3 class=" article-title centered">Catonem Catonem in Catonem est foederato et ulla quam foederato iusso magis
+        piget angustias avide
+        proscribi veneno deleto inpositae eius Ptolomaeo et ob Catonem invasisse aerarii sine nobis Romanum
+        gestorum enim iusso repetetur repetetur socio enim foederato culpa et classi classi Catonem dicere
+        est foederato quam eius magis iuste socio gestorum repetetur hostiles proscribi ob insulam invasisse
+        enim hostiles hausto magis voluntaria nostri eius morte et nunc nunc enim est est magis nunc Romanum
+        in gestorum eius avide aerarii ideoque angustias dicere per insulam urbem sunt ulla sunt socio
+        advectae Catonem quam piget quam culpa nunc inpositae deleto deleto facta.</h3>
+{% endif %}
+
+    {% if (is_granted("IS_AUTHENTICATED_REMEMBERED")) and (is_granted("ROLE_ADMIN")) %}
+        <a class="btn btn-default bottom-left" href="{{ path('intro_edit', {'id': intro.id}) }}">Editer</a>
+
+    {% endif %}
+
