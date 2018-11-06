@@ -1,7 +1,7 @@
 {% block navbar %}
     <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="NavBar">
         <a class="navbar-brand" href="{{ path('home') }}">
-            <img src="{{ asset('bundles/cevcore/logos/logo-black.png') }}" height="50" class="d-inline-block align-top"
+            <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" height="50" class="d-inline-block align-top"
                  alt="logo CeV" id="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -25,7 +25,7 @@
 
                 {% if (is_granted("IS_AUTHENTICATED_REMEMBERED")) %}
 
-                    <li class="nav-item btn btn-warning" id="offButton">
+                    <li class="nav-item waves-effect waves-light btn" id="offButton">
                         <a href="{{ path('fos_user_security_logout') }}">
                             <i class="fas fa-power-off"></i>
                         </a>
@@ -33,7 +33,7 @@
 
                 {% else %}
 
-                    <li class="nav-item btn btn-warning" id="donButton">
+                    <li class="nav-item waves-effect waves-light btn " id="donButton">
                         <a class="nav-link text-white" href="{{ path('don') }}" id="don">Je donne !</a>
                     </li>
 
@@ -48,57 +48,8 @@
                     </li>
                 {% endif %}
 
-                {#{% if (is_granted("IS_AUTHENTICATED_REMEMBERED")) and (is_granted("ROLE_ADMIN")) %}#}
-                {#<li><a href="{{ path('user.username', {'username': app.user.username } ) }}" class="helloAdmin" >Bonjour {{ app.user.username }} !</a>#}
-                {#</li>#}
-                {#<li><a href="{{ path('admin') }}" class="helloAdmin" >Administration</a>#}
-                {#</li>#}
-                {#{% elseif is_granted("IS_AUTHENTICATED_REMEMBERED") %}#}
-                {#<li>#}
-                {#<a href="{{ path('user.username', {'username': app.user.username } ) }}" class="helloUser" >#}
-                {#Bonjour {{ app.user.username }} !#}
-                {#</a>#}
-
-                {#</li>#}
-                {#{% endif %}#}
-
-
-
-
-                {# CONNEXION/DÉCONNEXION #}
-
-                {#{% if (is_granted("IS_AUTHENTICATED_REMEMBERED")) and (is_granted("ROLE_ADMIN")) %}
-                    <li class="nav-item">
-                        <a href="{{ path('fos_user_profile_show' ) }}" class="nav-link link text-white display-4">Bonjour {{ app.user.username }}
-                            !</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ path('admin') }}" class="nav-link link text-white display-4">Administration</a>
-                    </li>
-                #}{#{% elseif is_granted("IS_AUTHENTICATED_REMEMBERED") %}#}{#
-                    #}{#<li class="nav-item">#}{#
-                        #}{#<a href="{{ path('user.username', {'username': app.user.username } ) }}"#}{#
-                           #}{#class="nav-link link text-white display-4">#}{#
-                            #}{#Bonjour {{ app.user.username }} !#}{#
-                        #}{#</a>#}{#
-
-                    #}{#</li>#}{#
-                {% endif %}
-                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <li><a href="{{ path('fos_user_security_logout') }}" class="nav-link link text-white display-4">Déconnexion</a>
-                    </li>
-                {% else %}
-
-                {% endif %}#}
             </ul>
 
         </div>
     </nav>
-
-    <div class="col-sm-1" id="calendarButton">
-        <a href="{{ path('calendar') }}" id="openNavLeft" class="btn btn-lg" onclick="w3_open_left()" title="Calendrier"
-           style="position: fixed; top: 65px;left: 0px">
-            <i class="far fa-calendar-alt"></i>
-        </a>
-    </div>
 {% endblock %}

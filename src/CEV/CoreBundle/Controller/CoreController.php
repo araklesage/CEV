@@ -21,7 +21,7 @@ class CoreController extends Controller
 
 
         return $this->render('Core/homepage.html.twig', array(
-            'articles' => $articles => $this ->get('app.limit')->getLastArticles;
+            'articles' => $this ->get('app.limit')->getLastArticles()
         ));
     }
 
