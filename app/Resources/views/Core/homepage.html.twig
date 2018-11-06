@@ -37,12 +37,25 @@
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="row">
-
-                    <div class="col s4 text-center service-block">
-                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-
-                        {% else %}
-                            <a href="{{ path('membership') }}" title="Membership" class="card">
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <div class="col-lg-12 text-center service-block">
+                        <a href="{{ path('admin') }}" class="card hoverable">
+                            <div class="card-content">
+                                <div class="card-img">
+                                    <div id="wb_FontAwesomeIcon3">
+                                        <div id="FontAwesomeIcon3" style="font-size: 8rem; text-align: center"><i
+                                                    class="fas fa-hands-helping"></i></div>
+                                    </div>
+                                    <div class="card-title">
+                                        <h2>Panneau d'administration !</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% else %}
+                    <div class="col-lg-4 text-center service-block">
+                            <a href="{{ path('membership') }}" title="Membership" class="card hoverable">
                                 <div class="card-content">
                                     <div class="card-image">
                                         <div id="wb_FontAwesomeIcon3">
@@ -56,12 +69,12 @@
                                     <p>Participez à une expérience humaine</p>
                                 </div>
                             </a>
-                        {% endif %}
+
                     </div>
 
 
-                    <div class="col-lg-4 text-center service-block">
-                        <a href="{{ path('don') }}" title="Membership" class="card">
+                    <div class="col-lg-4 text-center service-block ">
+                        <a href="{{ path('don') }}" title="Membership" class="card hoverable">
                             <div class="card-content">
                                 <div class="card-image">
                                     <div id="wb_FontAwesomeIcon3">
@@ -76,8 +89,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 text-center service-block">
-                        <a href="{{ path('membership') }}" title="Membership" class="card">
+                    <div class="col-lg-4 text-center service-block ">
+                        <a href="{{ path('membership') }}" title="Membership" class="card hoverable">
                             <div class="card-content">
                                 <div class="card-image">
                                     <div id="wb_FontAwesomeIcon3">
@@ -92,7 +105,7 @@
                             </div>
                         </a>
                     </div>
-
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -107,8 +120,8 @@
         <div class="container">
             <div class="row">
                 {% for article in articles %}
-                    <div class="col-xs-12 col-sm-4">
-                        <a href="{{ path('article_show', {'id': article.id}) }}" class="waves-effect waves-light card">
+                    <div class="col-xs-12 col-sm-4 article-card">
+                        <a href="{{ path('article_show', {'id': article.id}) }}" class="waves-effect waves-light card hoverable">
                             <div class="card-image">
                                 {% if article.image is not null %}
                                     {{ article.image }}
@@ -117,10 +130,10 @@
                                     <img src="{{ asset ('bundles/cevcore/images/lamp.jpg') }}">
                                 {% endif %}
                             </div>
-                            <div class="card-title">
-                                <h4>
+                            <div class="card-title center-align">
+                                <h2>
                                     {{ article.title }}
-                                </h4>
+                                </h2>
                             </div>
                             <ul class="card-action">
 

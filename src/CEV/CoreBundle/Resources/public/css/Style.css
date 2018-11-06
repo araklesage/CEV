@@ -2,6 +2,12 @@
 #window{
     margin-top: 60px;
 }
+
+footer{
+    -webkit-box-shadow: 0px -4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -4px 14px 0px rgba(0,0,0,0.75);
+}
 /*Article view*/
 #pageArticle{
     margin-top: 40px;
@@ -27,7 +33,7 @@
 /*Navbar*/
 
 nav{
-    background-color: #3985E4 ;
+    background-color: #1E4678 ;
 }
 
 /*Homepage*/
@@ -37,12 +43,19 @@ nav{
     padding-bottom: 10px;
 }
 #service-page-home{
-    background-color: #3985E4;
+    background-color: #1E4678;
+    -webkit-box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.75);
+}
+.article-card{
+    margin-top: 15px;
 }
 .card {
     background-color: #E0A800;
 }
 .service-block{
+    padding-top: 17px;
     min-height: 361px;
 }
 
@@ -157,4 +170,18 @@ nav{
     -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+}
+
+.imgcard{
+    padding-top: 30px;
+}
+
+.sidestory{
+    background-color: #D2D9D4;
+    border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -webkit-box-shadow: -4px 0px 21px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 0px 21px -4px rgba(0,0,0,0.75);
+    box-shadow: -4px 0px 21px -4px rgba(0,0,0,0.75);
 }
