@@ -64,6 +64,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
@@ -186,5 +187,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+=======
+>>>>>>> 71fac2e6b247f7ab8a4d9ecc24a993f71a9db522
   </component>
 </module>

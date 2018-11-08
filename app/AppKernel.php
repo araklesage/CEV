@@ -26,11 +26,10 @@ class AppKernel extends Kernel
             new CEV\CalendarBundle\CEVCalendarBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new FOS\CKEditorBundle\FOSCKEditorBundle(),
-
-
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();

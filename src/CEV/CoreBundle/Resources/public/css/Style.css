@@ -8,6 +8,7 @@ footer{
     -moz-box-shadow: 0px -4px 14px 0px rgba(0,0,0,0.75);
     box-shadow: 0px -4px 14px 0px rgba(0,0,0,0.75);
 }
+
 #footer{
     height: fit-content;
 }
@@ -21,6 +22,7 @@ footer{
     width: inherit;
 }
                                                                         /*Article view*/
+
 #pageArticle{
     margin-top: 40px;
     -webkit-box-shadow: 0px 0px 26px 4px rgba(0,0,0,0.75);
@@ -40,11 +42,13 @@ footer{
 .buttonBlog{
     margin-top: 15px;
 }
+
 /*Article Index*/
 
 .card-content>p {
     font-size: initial;
 }
+
 
 /*Navbar*/
 
@@ -64,12 +68,14 @@ nav{
     -moz-box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.75);
 }
+
 #donate-button{
     background-color:  #E0A800;
 }
 #membership-button{
     background-color: #1E4678;
 }
+
 .article-card{
     margin-top: 15px;
 }
@@ -187,6 +193,7 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
                                                                         /*member page*/
 #addmember{
     margin-bottom: 15px;
@@ -200,7 +207,9 @@ nav{
 }
 
 .imgcard{
+
     padding-top: 2%;
+
 }
 
 .sidestory{
@@ -211,6 +220,7 @@ nav{
     -webkit-box-shadow: -4px 0px 21px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: -4px 0px 21px -4px rgba(0,0,0,0.75);
     box-shadow: -4px 0px 21px -4px rgba(0,0,0,0.75);
+
 }
 
 /*mobile css*/
