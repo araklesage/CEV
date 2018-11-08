@@ -1,77 +1,47 @@
-Symfony Standard Edition
-========================
 
-**WARNING**: This distribution does not support Symfony 4. See the
-[Installing & Setting up the Symfony Framework][15] page to find a replacement
-that fits you best.
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+Cerveau en voyage
+===
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+A Symfony project created on September 17, 2018, 10:26 am.
 
-What's inside?
---------------
+# Installation
+## 1. Récupérer le code
+Vous avez deux solutions pour le faire :
 
-The Symfony Standard Edition is configured with the following defaults:
+1. Via Git, en clonant ce dépôt ;
+2. Via le téléchargement du code source en une archive ZIP, à cette adresse : https://github.com/araklesage/CEV/archive/master.zip
 
-  * An AppBundle you can use to start coding;
 
-  * Twig as the only configured template engine;
+## 2. Définir vos paramètres d'application
+Pour ne pas qu'on se partage tous nos mots de passe, le fichier `app/config/parameters.yml` est ignoré dans ce dépôt. A la place, vous avez le fichier `parameters.yml.dist` que vous devez renommer (enlevez le `.dist`) et modifier.
 
-  * Doctrine ORM/DBAL;
+## 3. Télécharger les vendors
+Avec Composer bien évidemment :
 
-  * Swiftmailer;
+    php composer.phar install
+    
+## 4. Mettez à jour les instances Composer 
+    
+    composer update
+    
+## 5. Créez la base de données
 
-  * Annotations enabled for everything.
+Si la base de données que vous avez renseignée dans l'étape 2 n'existe pas déjà, créez-la :
 
-It comes pre-configured with the following bundles:
+    php bin/console doctrine:database:create
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+Puis créez les tables correspondantes au schéma Doctrine :
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+    php bin/console doctrine:schema:update --dump-sql
+    php bin/console doctrine:schema:update --force
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Enfin, éventuellement, ajoutez les fixtures :
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+    php bin/console doctrine:fixtures:load
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+## 5. Publiez les assets
+Publiez les assets dans le répertoire web :
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+    php bin/console assets:install web
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
-    capabilities
-
-  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
-    using the PHP built-in web server
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/3.4/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.4/doctrine.html
-[8]:  https://symfony.com/doc/3.4/templating.html
-[9]:  https://symfony.com/doc/3.4/security.html
-[10]: https://symfony.com/doc/3.4/email.html
-[11]: https://symfony.com/doc/3.4/logging.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
-[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
-[15]: https://symfony.com/doc/current/setup.html
