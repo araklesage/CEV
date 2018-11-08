@@ -5,7 +5,7 @@ namespace CEV\NewsBundle\Controller;
 use CEV\NewsBundle\Entity\Article;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 class NewsController extends Controller

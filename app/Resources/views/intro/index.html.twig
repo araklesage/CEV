@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Intros list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Content</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for intro in intros %}
+            <tr>
+                <td><a href="{{ path('intro_show', { 'id': intro.id }) }}">{{ intro.id }}</a></td>
+                <td>{{ intro.content }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('intro_show', { 'id': intro.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

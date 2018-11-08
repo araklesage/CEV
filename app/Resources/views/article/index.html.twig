@@ -20,9 +20,9 @@
         <div class="container-fluid" id="pageBlog">
             {% for article in articles %}
                 <div class="col-xs-12 col-sm-12">
-                    <a href="{{ path('article_show', {'id': article.id}) }}" class="card">
+                    <a href="{{ path('article_show', {'id': article.id}) }}" class="card hoverable">
                         <div class="row">
-                            <div class="card-image col-md-4">
+                            <div class="card-image col-md-4 imgcard">
                                 {% if article.image is not null %}
                                     {{ article.image }}
 
@@ -30,17 +30,17 @@
                                     <img src="{{ asset ('bundles/cevcore/images/lamp.jpg') }}">
                                 {% endif %}
                             </div>
-                            <div class="card-title col-md-8">
-                                <h4>
+                            <div class="card-title col-md-8 center-align">
+                                <h2>
                                     {{ article.title }}
-                                </h4>
+                                </h2>
                                 <ul class="card-action">
 
                                     <i class="glyphicon glyphicon-calendar"></i>
                                     <span>{{ article.date|date('d/m/Y') }}</span>
                                 </ul>
-                                <div class="card-content">
-                                    <p>{{ article.content|truncate(200, true)|raw }}</p>
+                                <div class="card-content text-justify">
+                                    <p>{{ article.content|truncate(500, true)|raw }}</p>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +50,9 @@
 
         </div>
     </section>
-    <section class="col-md-4">
+    <section class="col-md-4 sidestory" id="MySidebar">
+
+        <button class="btn"></button>
 
         {{ render(controller("CEVNewsBundle:Post:index")) }}
 

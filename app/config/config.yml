@@ -7,6 +7,15 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    app.path.article_images: /uploads/images/articles
+
+# config/packages/vich_uploader.yaml
+vich_uploader:
+    db_driver: orm
+    mappings:
+            article_images:
+                uri_prefix: '%app.path.article_images%'
+                upload_destination: '%kernel.root_dir%/../web%app.path.article_images%'
 
 assetic:
     debug:          "%kernel.debug%"
@@ -156,6 +165,7 @@ easy_admin:
 
     entities:
         User:
+            label: 'Les Utilisateurs'
             class : CEV\UserBundle\Entity\User
             list:
                 fields:
@@ -163,6 +173,8 @@ easy_admin:
                     - { property: 'email', label: 'Adresse mail', type: 'email'}
                     - { property: 'lastLogin', label: 'Dernière connexion'}
         Contact:
+            disabled_action: ['new', 'delete', 'edit']
+            label: 'Les messages'
             class : CEV\CoreBundle\Entity\Contact
             list:
                 fields:
@@ -172,22 +184,34 @@ easy_admin:
                     - { property: 'subject', label: 'Sujet'}
                     - { property: 'text', label: 'Message' }
         Article:
+
             class : CEV\NewsBundle\Entity\Article
+            label: 'Les Articles'
             list:
                 fields:
                     - { property: 'title', label: "Titre"}
                     - { property: 'date', label: "Date"}
-                    - { property: 'content', label: "Contenu"}
-                    - { property: 'image', label: "Image", type: 'image'}
+                    - { property: 'content', label: "Contenu" }
+                    - { property: 'image', label: "Image", type: 'file'}
+            form:
+                title: "Ajout/Edition d'articles"
+                fields:
+                     - { property: 'title', label: "Titre"}
+                     - { property: 'content', label: "Contenu", css_class: 'ckeditor'}
+                     - { property: 'image', label: "Image", type: 'file'}
         Member:
-                    class : CEV\NewsBundle\Entity\Member
-                    list:
-                        fields:
-                            - { property: 'name', label: "Prénom"}
-                            - { property: 'lastName', label: "Nom de Famille"}
-                            - { property: 'role', label: "Rôle"}
-                            - { property: 'picture', label: "Image", type: 'image'}
-                            - { property: 'presentation', label: "Présention"}
+            class : CEV\UserBundle\Entity\Member
+            label: 'Les Membres'
+            list:
+                fields:
+                      - { property: 'name', label: "Prénom"}
+                      - { property: 'lastName', label: "Nom de Famille"}
+                      - { property: 'role', label: "Rôle"}
+                      - { property: 'picture', label: "Image", type: 'image'}
+                      - { property: 'presentation', label: "Présention"}
+
+
+
 
 
 

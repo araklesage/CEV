@@ -4,11 +4,13 @@ namespace CEV\NewsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Article
  *
  * @ORM\Table(name="article")
  * @ORM\Entity(repositoryClass="CEV\NewsBundle\Repository\ArticleRepository")
+ *
  */
 class Article
 {
@@ -41,6 +43,22 @@ class Article
      * @ORM\Column(name="content", type="text")
      */
     private $content;
+
+    /**
+     * @return mixed
+     */
+    public function getTest()
+    {
+        return $this->test;
+    }
+
+    /**
+     * @param mixed $test
+     */
+    public function setTest($test)
+    {
+        $this->test = $test;
+    }
 
     /**
      * @ORM\OneToOne(targetEntity="CEV\NewsBundle\Entity\Image", cascade={"persist", "remove"})

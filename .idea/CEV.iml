@@ -10,18 +10,24 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/egeloen/ckeditor-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/egeloen/json-builder" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/friendsofsymfony/user-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/metadata" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kriswallsmith/assetic" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/oyejorge/less.php" />
@@ -36,7 +42,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/stfalcon/tinymce-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/assetic-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
@@ -55,6 +60,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/twbs/bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/extensions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vich/uploader-bundle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -67,18 +73,24 @@
           <root url="file://$MODULE_DIR$/vendor/doctrine/cache" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/collections" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/doctrine-bundle" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/vendor/easycorp/easyadmin-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/egeloen/ckeditor-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/egeloen/json-builder" />
           <root url="file://$MODULE_DIR$/vendor/fig/link-util" />
+          <root url="file://$MODULE_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
           <root url="file://$MODULE_DIR$/vendor/friendsofsymfony/user-bundle" />
           <root url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/vendor/jms/metadata" />
           <root url="file://$MODULE_DIR$/vendor/kriswallsmith/assetic" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/oyejorge/less.php" />
@@ -93,7 +105,6 @@
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
-          <root url="file://$MODULE_DIR$/vendor/stfalcon/tinymce-bundle" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/assetic-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
@@ -112,6 +123,7 @@
           <root url="file://$MODULE_DIR$/vendor/twbs/bootstrap" />
           <root url="file://$MODULE_DIR$/vendor/twig/extensions" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
+          <root url="file://$MODULE_DIR$/vendor/vich/uploader-bundle" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/components/jquery" />
@@ -120,18 +132,24 @@
           <root url="file://$MODULE_DIR$/vendor/doctrine/cache" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/collections" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/doctrine-bundle" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/vendor/easycorp/easyadmin-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/egeloen/ckeditor-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/egeloen/json-builder" />
           <root url="file://$MODULE_DIR$/vendor/fig/link-util" />
+          <root url="file://$MODULE_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
           <root url="file://$MODULE_DIR$/vendor/friendsofsymfony/user-bundle" />
           <root url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
           <root url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/vendor/jms/metadata" />
           <root url="file://$MODULE_DIR$/vendor/kriswallsmith/assetic" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/oyejorge/less.php" />
@@ -146,7 +164,6 @@
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
-          <root url="file://$MODULE_DIR$/vendor/stfalcon/tinymce-bundle" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/assetic-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
@@ -165,6 +182,7 @@
           <root url="file://$MODULE_DIR$/vendor/twbs/bootstrap" />
           <root url="file://$MODULE_DIR$/vendor/twig/extensions" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
+          <root url="file://$MODULE_DIR$/vendor/vich/uploader-bundle" />
         </SOURCES>
       </library>
     </orderEntry>

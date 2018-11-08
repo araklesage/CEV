@@ -21,7 +21,7 @@ class CoreController extends Controller
 
 
         return $this->render('Core/homepage.html.twig', array(
-            'articles' => $articles => $this ->get('app.limit')->getLastArticles;
+            'articles' => $this ->get('app.limit')->getLastArticles()
         ));
     }
 
@@ -40,7 +40,7 @@ class CoreController extends Controller
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
-            $em->flush;
+            $em->flush();
 
             $request->getSession()->getFlashBag()->add('notice', 'Votre message à bien été envoyé.');
             return $this->redirectToRoute('home');

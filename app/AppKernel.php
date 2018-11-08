@@ -24,7 +24,10 @@ class AppKernel extends Kernel
             new CEV\NewsBundle\CEVNewsBundle(),
             new CEV\UserBundle\CEVUserBundle(),
             new CEV\CalendarBundle\CEVCalendarBundle(),
-            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new FOS\CKEditorBundle\FOSCKEditorBundle(),
+
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

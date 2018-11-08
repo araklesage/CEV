@@ -1,5 +1,5 @@
 {% block footer %}
-    <footer class="footer parallax-container navbar-fixed-bottom" id="footer" style="height: 250px">
+    <footer class="footer parallax-container text-white navbar-fixed-bottom" id="footer">
         <div class="parallax" style="padding: 10px">
             <img src="{{ asset("bundles/cevcore/images/old.jpg") }}" style="opacity: 1">
         </div>
@@ -9,13 +9,13 @@
                     PARTENAIRES
                 </h6>
                 <div class="row">
-                    <div class="col-md-6" style="height: 90px">
+                    <div class="col-md-6">
                         <a href="http://www.frcneurodon.org/" style="width: inherit">
                             <img src="{{ asset("bundles/cevcore/logos/frc.png") }}" alt="frc-logo"
                                  style=" opacity: 1; width: inherit; box-shadow: 2px 1px 5px 0px black">
                         </a>
                     </div>
-                    <div class="col-md-6" style="height: 90px">
+                    <div class="col-md-6">
                         <a href="https://www.helloasso.com/" style="width: inherit">
                             <img src="{{ asset("bundles/cevcore/logos/hello-asso.png") }}" alt="frc-logo"
                                  style=" opacity: 1; width: inherit">
@@ -24,30 +24,33 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 footer_about quick">
-                <h6 class="mb-4 mbr-fonts-style foot-title display-7">
+                <h6 class="mb-4 mbr-fonts-style foot-title display-7 text-white">
                     Informations légales
                 </h6>
-                <ul class="quick_link">
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Mention Légales</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i>Condition général d'utilisation</a></li>
-                    <li><a href="{{ path('admin') }}"><i class="fa fa-chevron-right"></i>Administration</a></li>
+                <ul class="quick_link text-white">
+                    <li><a href="#"><i class="fa fa-chevron-right text-white"></i>Mention Légales</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right text-white"></i>Condition général d'utilisation</a>
+                    </li>
+                    <li><a href="{{ path('fos_user_security_login') }}"><i class="fa fa-chevron-right text-white"></i>Connexion</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
+                <h6>
+                    Contacts :
+                </h6>
 
-                <address>
-                    <ul class="my_address">
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>cev@free.fr</a></li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>01 40 33 77 91</a></li>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>36 Avenue Alsace Lorraine, 19000 TULLE </span></a>
-                        </li>
-                    </ul>
-                </address>
+                <ul class="my_address text-white">
+                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>cev@free.fr</a></li>
+                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>01 40 33 77 91</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>36 Avenue Alsace Lorraine, 19000 TULLE </span></a>
+                    </li>
+                </ul>
+
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 footer_about">
                 <a href="{{ path ('home') }}" style="width: inherit">
-                    <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" alt="Logo CEV"
-                         style=" opacity: 1; width: inherit">
+                    <img src="{{ asset('bundles/cevcore/logos/logo-white.png') }}" id="logo_footer" alt="Logo CEV">
                 </a>
             </div>
         </div>
