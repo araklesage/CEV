@@ -6,7 +6,9 @@ Cerveau en voyage
 A Symfony project created on September 17, 2018, 10:26 am.
 
 # Installation
+
 ## 1. Récupérer le code
+
 Vous avez deux solutions pour le faire :
 
 1. Via Git, en clonant ce dépôt ;
@@ -14,9 +16,11 @@ Vous avez deux solutions pour le faire :
 
 
 ## 2. Définir vos paramètres d'application
+
 Pour ne pas qu'on se partage tous nos mots de passe, le fichier `app/config/parameters.yml` est ignoré dans ce dépôt. A la place, vous avez le fichier `parameters.yml.dist` que vous devez renommer (enlevez le `.dist`) et modifier.
 
 ## 3. Télécharger les vendors
+
 Avec Composer bien évidemment :
 
     php composer.phar install
@@ -41,7 +45,12 @@ Enfin, éventuellement, ajoutez les fixtures :
     php bin/console doctrine:fixtures:load
 
 ## 5. Publiez les assets
+
 Publiez les assets dans le répertoire web :
 
     php bin/console assets:install web
+    
+## 6. instanciation de FOSUserBundle
 
+Afin de pouvoir être utilisé, FOSUserBundle réclame un email. 
+Dans votre fichier parameters.yml, renseignez une adresse mail ( mailer_user )et son mot de passe (mailer_password).
